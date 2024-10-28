@@ -45,7 +45,7 @@ app.post("/posts",(req,res)=>{
   let { username ,content} = req.body;
   let id = uuidv4();
   posts.push({id,username,content});
-    res.redirect("/posts");
+    res.redirect("/");
 });
 
 app.get("/posts/:id",(req,res)=>{
@@ -63,7 +63,7 @@ app.patch("/posts/:id",(req,res)=>{
     post.content = newcontent;
     post.username = newusername;
     console.log(post);
-    res.redirect("/posts");
+    res.redirect("/");
 });
 
 app.get("/posts/:id/edit",(req,res)=>{
@@ -75,7 +75,7 @@ app.get("/posts/:id/edit",(req,res)=>{
 app.delete("/posts/:id",(req,res)=>{
     let { id } = req.params;
      posts = posts.filter((p) => id !== p.id);
-     res.redirect("/posts");
+     res.redirect("/");
 })
 
 app.listen(port,()=>{
