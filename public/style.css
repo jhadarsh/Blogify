@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background-image: url('photo.png');
+    background-size: 90%;
+    /* background-size: cover; */
+    padding-top: 100px !important;
+    background-position: center;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.nab {
+    background-color: burlywood;
+    font-weight: 900 !important;
+    
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding for the form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
+}
+
+.form-control {
+    border: 1px solid #ced4da; /* Light border for inputs */
+    border-radius: 4px; /* Rounded borders for inputs */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Primary border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
+}
+
+
+
+
+
+
+
