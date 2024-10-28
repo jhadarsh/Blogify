@@ -18,7 +18,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://localhost:8080/">Home</a>
+                       
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -27,7 +28,7 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary text-white" href="http://localhost:8080/posts/new">Write a Post</a>
+                        <a class="nav-link btn btn-primary text-white" href="/posts/new">Write a Post</a>
                     </li>
                 </ul>
             </div>
@@ -56,9 +57,13 @@
                             <div class="card-body">
                             <h5 class="card-title">@<%= post.username %></h5>
                             <p class="card-text"><%= post.content %></p>
-                            <a href="http://localhost:8080/posts/<%= post.id %>" class="btn btn-primary">Read More</a>
-                            <button class="btn btn-success" ><a style="text-decoration: none; color: aliceblue;" href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a></button>
-                            
+                            <form method="get" action="/posts/<%= post.id %>">
+                                <button class="btn btn-primary" style="margin-top: 5px;">Read More</button>
+                            </form>
+                            <form method="get" action="/posts/<%= post.id %>/edit">
+                                <button class="btn btn-success" style="margin-top: 5px;">Edit</button>
+                            </form>
+                                                    
                             <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
                                 <button class="btn btn-danger" style="margin-top: 5px;">Delete</button>
                             </form>
